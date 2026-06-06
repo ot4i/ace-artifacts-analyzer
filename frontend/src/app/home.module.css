@@ -1,0 +1,143 @@
+/* Main container for the page */
+.container {
+  height: 100vh;
+  background: linear-gradient(to right, #e5e7eb, #f3f4f6); /* Light gray gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: sans-serif;
+  flex-direction: column;
+  margin-top: 20px; /* Add space to account for the fixed header */
+}
+
+.boldText {
+  font-weight: bold;
+  font-size: large;
+}
+
+.orText {
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 3rem;
+  font-size: 1.2rem;
+}
+
+.appTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+/* Header section, now positioned at the top */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #2C5282, #1A365D); /* Background gradient */
+  padding: 1rem; /* Padding of 1rem */
+  color: white; /* White text */
+  display: flex;
+  justify-content: flex-start; /* Align logo and text to the left */
+  align-items: center;
+  gap: 1rem; /* Space between logo and title */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  z-index: 1000; /* Ensure header stays above other content */
+}
+
+/* Ensure the content doesn't overlap the header */
+.logoText {
+  display: flex;
+  align-items: center;
+}
+
+.logoText h1 {
+  font-size: 28px;
+  color: white;
+  margin-left: 10px; /* Space between the logo and text */
+}
+
+/* Form box styling */
+.formBox {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+.formBox p {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.formBox label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.formBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+}
+
+.formBox button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formBox button:hover {
+  background-color: #d0d8f0;
+}
+
+.formBox button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+
+.mainHeading {
+  font-size: 1.8rem; /* Increase this as needed */
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-align: center; /* Optional: center align */
+  color: #333;        /* Optional: tweak color */
+}
+
+
+.mainContent {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1300px;
+  margin-top: 6rem;
+  flex-wrap: wrap; /* Optional: allow wrapping on small screens */
+}
+
+/* Left and Right column sections */
+.leftColumn,
+.rightColumn {
+  flex: 1;
+  min-width: 500px;
+}
+
+
