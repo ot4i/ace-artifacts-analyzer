@@ -1,31 +1,27 @@
 The ACE Artifacts Analyzer is an intelligent analysis and planning utility designed to optimize the deployment of IBM App Connect Enterprise (ACE) artifacts to containerized environments. When migrating or deploying large-scale integration solutions—comprising Applications, REST APIs, Integration Services, Shared Libraries, and Message Flows—this tool provides data-driven insights and recommendations for optimal artifact grouping strategies, helping towards:
 
-    🚀 Faster startup times for the Integration Runtime
-    🧠 Optimized memory usage through logical grouping
-    🔄 Minimal service disruption during configuration updates
+- Faster startup times for the Integration Runtime
+- Optimized memory usage through logical grouping
+- Minimal service disruption during configuration updates
 
 The utility supports both BAR files and Integration Node backups.
-## Disclaimer: This code is provided in good faith and AS-IS. There is no warranty or further service implied or committed and any supplied sample code is not supported via IBM product service channels. You may submit a question in the issues, but a response is not guaranteed. 
 
-# ACE Artifacts Analyzer and Deployment Planner - Setup Guide
+## ACE Artifacts Analyzer and Deployment Planner - Setup Guide
 
-## 📋 Prerequisites
+### Prerequisites
 
 Before you begin, ensure the following tools are installed on your system:
 
 - **Java 17**
-- **Maven 3.9.9**  
-  [Installation Instructions](https://maven.apache.org/install.html)
+- **Maven 3.9.9**    [Installation Instructions](https://maven.apache.org/install.html)
 - **Node.js 20+**
 - **npm 9+**
-- **Git**  
-  [Installation Instructions](https://github.com/git-guides/install-git)
+- **Git**    [Installation Instructions](https://github.com/git-guides/install-git)
 
----
 
-## 🚀 Setup and Usage on macOS
 
-### Steps
+### Setting up the utility on macOS
+
 
 1. **Clone the Repository**
 
@@ -44,26 +40,22 @@ Before you begin, ensure the following tools are installed on your system:
 
 3. **Build the project**
    
-In project root, run:
-  ```bash
-   mvn install
-  ```
-
-    
+    In project root, run:
+     ```bash
+      mvn install
+     ```
 4. **Start the Backend program**
-  
-  Note: You must set the **MQSIPROFILE_PATH** Environment Variable in the same terminal session you are running backend.
+
+   You must set the **MQSIPROFILE_PATH** Environment Variable in the same terminal session you are running backend.
         The variable should be set to the path of the mqsiprofile executable present in ACE installation. A sample path is given below.
 
-    
-     export MQSIPROFILE_PATH="/Applications/IBM App Connect Enterprise 13.0.7.0.app/Contents/mqsi/server/bin/mqsiprofile"
-     echo $MQSIPROFILE_PATH
-     
-     cd backend
-     mvn spring-boot:run
-     
-
-  5. **Start the frontend program**
+       
+       export MQSIPROFILE_PATH="/Applications/IBM App Connect Enterprise 13.0.7.0.app/Contents/mqsi/server/bin/mqsiprofile"
+       echo $MQSIPROFILE_PATH
+       cd backend
+       mvn spring-boot:run
+       
+  6. **Start the frontend program**
      
       From project root,  run:
       ```bash
@@ -72,14 +64,14 @@ In project root, run:
       ```
 
 
-## How to setup and use the utility on Windows:
+### Setting up the utility on Windows:
 
-### Steps
+
  1. **Clone the Repository**
      
-  ```
-  git clone https://github.com/ot4i/ace-artifacts-analyzer.git
-  ```
+     ```
+     git clone https://github.com/ot4i/ace-artifacts-analyzer.git
+     ```
 
   
   2. **Setup the frontend**
@@ -99,31 +91,31 @@ In project root, run:
 
  3. **Build the project**
    
-In project root, run:
-  ```bash
-   mvn install
-  ```
-
+    In project root, run:
+     ```bash
+      mvn install
+     ```
+     
 4. **Start the Backend program**
 
-From the project root, run:
+    From the project root, run:
 
       
-```bash
+    ```bash
       set MQSIPROFILE_PATH="C:\Program Files\IBM\ACE\13.0.7.0\server\bin\mqsiprofile.cmd"      
       cd backend
       mvn spring-boot:run
-```
+     ```
 
 
 5. **Start the frontend program**
    
    Open a new command window. From the project root, run:
      
-  ```
-  cd frontend
-  npm run dev
-  ```
+     ```
+     cd frontend
+     npm run dev
+     ```
 
 
 
@@ -131,10 +123,9 @@ From the project root, run:
 ## Analyzing Artifacts
 
 Once both the frontend and backend are running:
-
-    - Open your browser (preferably Google Chrome).
-    - Navigate to: http://localhost:3000
-    - You should see the application's landing page.
+- Open your browser (preferably Google Chrome).
+- Navigate to: http://localhost:3000
+- You should see the application's landing page.
 
         
 This should provide you with the landing page as shown below:
@@ -330,3 +321,6 @@ At the end of either workflow (BAR or backup), the utility provides:
 - **Intermediate reports** (per BAR or server).
 - A **final consolidated report** showing which components are essential for deployment and execution of the applications.
 
+
+
+### Disclaimer: This code is provided in good faith and AS-IS. There is no warranty or further service implied or committed and any supplied sample code is not supported via IBM product service channels. You may submit a question in the issues, but a response is not guaranteed. 
